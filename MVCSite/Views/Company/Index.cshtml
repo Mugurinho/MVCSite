@@ -1,0 +1,31 @@
+﻿@model MVCSite.ViewModels.CompanyViewModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Companies records</h2>
+<hr />
+
+<div>
+    @Html.ActionLink("Create new", "Create", "Company", null, new { @class = "button" })
+    <table>
+        <tr>
+            <th>Company Name</th>
+            <th>Edit company</th>
+            <th>Delete company</th>
+        </tr>
+
+        @foreach (var item in Model.Companies)
+        {
+            <tr id="@item.CompanyID">
+                <td>@item.Name</td>
+                <td>@Html.ActionLink("Edit", "Edit", "Company", null, new { @class = "buttonedit" })</td>
+                <td>@Html.ActionLink("Delete", "Delete", "Company", null, new { @class = "buttondelete" })</td>
+            </tr>
+        }
+    </table>
+</div>
+
+@Html.ActionLink("Back to menu", "Index", "Home", null, new { @class = "button" })
+@*@Html.ActionLink("Create new", "Create", "Company", null, new { @class = "button" })*@
+

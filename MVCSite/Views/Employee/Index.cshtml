@@ -1,0 +1,39 @@
+﻿@model MVCSite.ViewModels.EmployeeViewModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Employees records</h2>
+<hr />
+
+<div>
+    @Html.ActionLink("Create new", "Create", "Employee", null, new { @class = "button" })
+    <table>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Company</th>
+            <th>Edit employee</th>
+            <th>Delete employee</th>
+        </tr>
+       
+            @foreach (var item in Model.Employees)
+            {
+                <tr id="@item.EmployeeID">
+                    <td>@item.FirstName</td>
+                    <td>@item.LastName</td>
+                    <td>@item.Email</td>
+                    <td>@item.Telephone</td>
+                    <td>@item.Company.Name</td>
+                    <td>@Html.ActionLink("Edit", "Edit", "Employee", new { id = item.EmployeeID }, new { @class = "buttonedit" })</td>
+                    <td>@Html.ActionLink("Delete", "Delete", "Employee", null, new { @class = "buttondelete" })</td>
+                </tr>
+            }
+    </table>
+</div>
+
+@Html.ActionLink("Back to menu", "Index", "Home", null, new { @class = "button" })
+@*@Html.ActionLink("Create new", "Create", "Employee", null, new { @class = "button" })*@
+

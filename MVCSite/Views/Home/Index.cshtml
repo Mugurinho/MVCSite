@@ -1,0 +1,20 @@
+﻿@model MVCSite.ViewModels.SubMenuViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>MVC Site</h2>
+<hr />
+
+<div style="margin-top: 50px">
+    @foreach (var item in Model.SubMenues)
+    {
+        <div>
+            <p>@Html.ActionLink(@item.BtnName, @item.Action, @item.Controller, null, new { @class = "frame" })</p>
+        </div>
+    }
+</div>
+
+
+

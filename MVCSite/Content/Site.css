@@ -1,0 +1,111 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.button, .buttonedit, .buttondelete {
+    text-decoration: none;
+    border: 1px solid black;
+    transition: all 0.4s ease 0s;
+    margin: 0px 10px 10px 0px;
+    padding: 5px 20px;
+    color: black;
+}
+
+    .button:hover {
+        background-color: black;
+        color: white;
+        text-decoration: none;
+    }
+
+    .buttonedit:hover {
+        background-color: steelblue;
+        color: white;
+        text-decoration: none;
+    }
+
+    .buttondelete:hover {
+        background-color: red;
+        color: white;
+        text-decoration: none;
+    }
+
+.frame {
+    position: relative;
+    border: 1px solid silver;
+    width: 270px;
+    float: left;
+    margin: 0px 10px 10px 0px;
+    padding: 50px;
+    height: 120px;
+    color: gray;
+    text-align: center;
+    font-weight: bold;
+    font-size: 17px;
+    transition: all 0.3s ease 0s;
+}
+
+    .frame:hover {
+        text-decoration: none;
+        color: dimgray;
+        font-size: larger;
+        background-color: #f3f1f3;
+    }
+
+    .frame h2 {
+        text-decoration: none;
+        margin-top: 0px;
+    }
+
+table {
+    border-collapse: collapse;
+    background-color: whitesmoke;
+    color: black;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 1px groove lightgray;
+}
+
+th {
+    background-color: white;
+    color: black;
+    height: 40px;
+    text-align: left;
+    padding-left: 10px;
+}
+
+td {
+    height: 35px;
+    padding-left: 10px;
+}
+
+tr:hover {
+    background-color: #f3f1f3;
+}
+
+footer {
+    position: fixed;
+    bottom: 0px;
+    float: left;
+    height: 35px;
+    margin: 0px 50px 0px 0px;
+    text-align: center;
+    padding: 10px 30px;
+}
